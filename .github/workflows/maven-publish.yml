@@ -27,8 +27,8 @@ jobs:
                   <servers>
                     <server>
                       <id>hello-world-war</id>
-                      <username>toyuvarajb@gmail.com</username>
-                      <password>cmVmdGtuOjAxOjE3NjkwOTk3MTg6c3RwbHB6Nk83Z0xmWExVNkpSTFRINmtKRlh3</password>
+                      <username>admin</username>
+                      <password>cmVmdGtuOjAxOjE3NjkxNzc0MTY6eFpLdFZOVWhOcllPWEQ3aFNDRERlSGNiTTZW</password>
                     </server>
                   </servers>
                 </settings>" > ~/.m2/settings.xml
