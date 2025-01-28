@@ -11,6 +11,7 @@
 		haiiiiiii
 		Hello World
 		Today testing webook
+		Maven testing
 		<%= new java.util.Date() %></p>
 	<p>
 		You are coming from 
