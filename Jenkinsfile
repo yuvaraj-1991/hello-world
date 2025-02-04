@@ -1,9 +1,10 @@
 pipeline {
-    agent none 
+    agent {label 'node-slave'} 
     stages {
         stage ('git checkout') {
            steps {
-               sh 'git clone '
+               sh 'ls'
+               sh 'pwd'
            }
         }
     }
