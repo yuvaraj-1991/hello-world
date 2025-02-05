@@ -1,8 +1,7 @@
 pipeline {
     agent {label 'node-slave'}
     stages {
-        stage('Example') {
-            agent any
+        stage('Example') {            
             options {
                 // Timeout counter starts BEFORE agent is allocated
                 timeout(time: 1, unit: 'SECONDS')
