@@ -1,18 +1,15 @@
 pipeline {
-    agent {label 'node-slave'} 
+    agent {label 'node-slave'}
     stages {
-        stage ('git checkout') {
-           steps {
-               sh 'git clone https://github.com/yuvaraj-1991/hello-world.git'
-               sh 'pwd'
-               }
-        }
-         stage ('build war file') {
-             steps {
-                sh 'cd hello-world'
-                sh 'mvn clean package'
-              }
-          }  
+        stage('Example') {
+            agent any
+            options {
+                // Timeout counter starts BEFORE agent is allocated
+                timeout(time: 1, unit: 'SECONDS')
+            }
+            steps {
+                echo 'Hello World'
+            }
         }
     }
-
+}
