@@ -1,0 +1,12 @@
+pipeline {
+  agent {lable 'node-slave'} {
+    stages {
+      stage ('checkout') {
+        steps {
+          sh 'ls'
+          sh 'pwd'
+        }
+      }
+    }
+  }
+}
