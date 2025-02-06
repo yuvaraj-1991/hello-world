@@ -26,6 +26,7 @@ pipeline {
               </servers>
                   " >> ~/.m2/settings.xml
             ```
+            sh 'mvn deploy'
         }
        }
     }
