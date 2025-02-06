@@ -11,7 +11,7 @@
 <distributionManagement>
     <repository>
         <id>new-hello-world-war-libs-release</id>
-        <name>hello-world-new-war</name>
+        <name>new-hello-world-war-libs-release</name>
         <url>http://54.196.195.90:8082/artifactory/new-hello-world-war-libs-release/</url>
     </repository>
 </distributionManagement>
