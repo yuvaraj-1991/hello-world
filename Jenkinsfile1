@@ -24,7 +24,7 @@ pipeline {
                       <password>cmVmdGtuOjAxOjE3NzAzNjg2NDM6S3dYUmc3MmFtZXVMRUhRSTN4THVIQ3E3Zldm</password>
                   </server>
               </servers>
-                  "
+                  " >> ~/.m2/settings.xml
             ```
         }
        }
