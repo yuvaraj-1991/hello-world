@@ -8,10 +8,7 @@
 	<h1>Hello World</h1>
 
   <p>
-		haiiiiiii
-		Hello World
-		Today testing webook
-		Maven testing
+		This is a jenkins file test
 		<%= new java.util.Date() %></p>
 	<p>
 		You are coming from 
