@@ -1,4 +1,4 @@
-@Library('jenkins-shared-library-new')
+@Library('jenkins-shared-library-new') _
 
 pipeline {
     agent {label 'node-slave'}
