@@ -6,6 +6,10 @@ pipeline {
           sh 'ls'
           sh 'pwd'
         }
+       stage ('build') {
+          sh 'echo "Building "'
+          sh 'mvn clean package'
+       } 
       }
     }
   }
