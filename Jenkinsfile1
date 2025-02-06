@@ -6,13 +6,13 @@ pipeline {
           sh 'ls'
           sh 'pwd'
         }
+      }
        stage ('build') {
         steps {
           sh 'echo "Building "'
           sh 'mvn clean package'
         }          
-       } 
-      }
+       }       
     }
   }
 
