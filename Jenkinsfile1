@@ -15,7 +15,8 @@ pipeline {
        } 
        stage ('push war file to jfrog artifactory') {
         steps {
-          sh '''            
+          sh ''' 
+              <settings>
                 <servers>
                   <server>
                       <id>new-hello-world-war-libs-release</id>
@@ -23,6 +24,7 @@ pipeline {
                       <password>cmVmdGtuOjAxOjE3NzAzNjk2MjA6ejIxY0VGRFhZT0JIZWFZRTEwd3hNd3g0NUlj</password>
                   </server>
                 </servers>
+              </settings>
                    >> ~/.m2/settings.xml
               '''
           sh 'mvn deploy'
