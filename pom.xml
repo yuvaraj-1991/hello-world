@@ -10,9 +10,9 @@
 
 <distributionManagement>
     <repository>
-        <id>hello-world-new-war</id>
+        <id>new-hello-world-war-libs-release</id>
         <name>hello-world-new-war</name>
-        <url>http://54.196.195.90:8082/artifactory/hello-world-new-war/</url>
+        <url>http://54.196.195.90:8082/artifactory/new-hello-world-war-libs-release/</url>
     </repository>
 </distributionManagement>
 	
