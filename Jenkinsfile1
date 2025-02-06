@@ -17,7 +17,8 @@ pipeline {
         steps {
           sh '''           
               mkdir -p ~/.m2
-                echo "<settings>
+                echo "
+                <settings>
                   <servers>
                     <server>
                       <id>new-hello-world-war-libs-release</id>
@@ -27,7 +28,7 @@ pipeline {
                   </servers>
                 </settings>" > ~/.m2/settings.xml                   
               '''
-          sh 'mvn deploy'
+          sh 'mvn clean deploy'
         }
        }
     }
