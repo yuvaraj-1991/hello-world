@@ -1,39 +1,31 @@
+@Library('jenkins-shared-library-new')
+
 pipeline {
-    agent none           
-    stages 
-    {
-        stage('checkout') {
-            agent { label 'node-slave'}
+    agent {label 'node-slave'}
+environment {
+    ARTIFACTORY_CREDENTIALS = credentials('jfrog-credentials')
+  }
+    stages {
+        stage('Checkout') {
             steps {
-                sh 'ls'
-                sh 'pwd'
+                git 'https://github.com/yuvaraj-1991/hello-world.git'
             }
         }
-         stage('build') {
-             agent { label 'node-slave'}
+        stage('Build') {
             steps {
-                    sh 'mvn clean package'
-                }
+                build_stage_1()
             }
-         stage('publish') { 
-             agent { label 'node-slave'}
+        }
+             
+         stage('publish') {              
             steps {
-                    sh 'mkdir -p ~/.m2'
-                    sh '''
-                    echo "<settings>
-                            <servers>
-                                <server>
-                                  <id>new-hello-world-war-libs-release</id>
-                                  <username>admin</username>
-                                  <password>cmVmdGtuOjAxOjE3NzAzNjk2MjA6ejIxY0VGRFhZT0JIZWFZRTEwd3hNd3g0NUlj</password>
-                                </server>
-                              </servers>
-                            </settings>" > ~/.m2/settings.xml
-                    '''
-                sh 'cat ~/.m2/settings.xml'
-                sh 'mvn clean deploy'
+                    publish_stage_1()
             }    
         }
-       
+        stage('deploy') {              
+            steps {
+                    deploy_stage_1()
+            }    
+        }       
     }   
 }
