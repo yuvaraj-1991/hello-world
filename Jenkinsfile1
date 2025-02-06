@@ -12,7 +12,22 @@ pipeline {
           sh 'echo "Building "'
           sh 'mvn clean package'
         }          
-       }       
+       } 
+       stage ('push war file to jfrog artifactory') {
+        steps {
+          sh ```
+            echo "
+                <servers>
+                  <server>
+                      <id>hello-world-new-war</id>
+                      <username>admin</username>
+                      <password>cmVmdGtuOjAxOjE3NzAzNjg2NDM6S3dYUmc3MmFtZXVMRUhRSTN4THVIQ3E3Zldm</password>
+                  </server>
+              </servers>
+                  "
+            ```
+        }
+       }
     }
   }
 
