@@ -15,7 +15,7 @@ pipeline {
        } 
        stage ('push war file to jfrog artifactory') {
         steps {
-          sh ```
+          sh '''
             echo "
                 <servers>
                   <server>
@@ -25,8 +25,8 @@ pipeline {
                   </server>
               </servers>
                   " >> ~/.m2/settings.xml
-            ```
-            sh 'mvn deploy'
+              '''
+          sh 'mvn deploy'
         }
        }
     }
